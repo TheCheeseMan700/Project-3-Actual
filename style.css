@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  margin: auto;
+}
+
+.banner {
+  padding: 2px;
+  letter-spacing: 20px;
+  font-size: 200%;
+  text-align: CENTER;
+  margin: auto;
+  color: rgb(149, 158, 143);
+  border: 20px solid rgb(100,100,100);
+  background-color: rgb(60,60,60);
+  font-family: 'Handjet', sans-serif;
+}
+
+.information-section {
+  border: 1px solid black;
+  display: grid;
+  background-color: rgb(50,50,50);
+  grid-template-columns: 10% 80% 10%;
+  justify-content: Center;
+}
+
+.citizen-information {
+  border: 20px solid rgb(100,100,100);
+  background-color: rgb(59,62,59);
+  padding: 10px;
+  display: grid;
+  color: rgb(149, 158, 143);
+  font-family: 'Handjet', sans-serif;
+}
+
+.citizen-information2 {
+  border: 20px solid rgb(100,100,100);
+  background-color: rgb(60,60,60);
+  padding: 10px;
+  display: grid;
+  color: rgb(149, 158, 143);
+  font-family: 'Handjet', sans-serif;
+}
+
+#sketch-holder {
+  border: 1px solid black;
+  justify-self: Center;
+}
+  
+#button-holder {
+  padding: 20%;
+  border: 20px solid rgb(100,100,100);
+  background-color: rgb(60,60,60);
+  text-align: center;
+  display: grid;
+  grid-template-row: 10% 10% 10%;
+  gap: 5%;
+  justify-content: center;
+}
+
+#button-holder-2 {
+  padding: 20%;
+  border: 20px solid rgb(100, 100, 100);
+  background-color: rgb(60,60,60);
+  text-align: top;
+  display: grid;
+  gap: 5%;
+  justify-content: center;
+}
+
+p {
+  margin:auto;
+  text-align: center;
+  font-size: 135%;
+}
