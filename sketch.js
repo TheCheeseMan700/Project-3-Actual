@@ -171,7 +171,7 @@ function getTerritory() {
     textFont('Handjet', 60);
     text(worldTerritories[territoryR], width*0.18, height*0.695);
   
-    getRegion(territoryR);
+    //getRegion(territoryR);
   
     counter1 = territoryR;
   
@@ -209,7 +209,7 @@ function nextTerritory() {
     textFont('Handjet', 60);
     text(worldTerritories[counter1], width*0.18, height*0.695);
   
-    getRegion(counter1);
+    //getRegion(counter1);
   
     if (counter1 == 0) {
       image(img2, 40, 80);
@@ -244,7 +244,7 @@ function previousTerritory() {
     textFont('Handjet', 60);
     text(worldTerritories[counter1], width*0.18, height*0.695);
   
-    getRegion(counter1);
+    //getRegion(counter1);
   
     if (counter1 == 0) {
       image(img2, 40, 80);
@@ -294,7 +294,7 @@ function getCurrent() {
   textAlign(CENTER);
   textFont('Handjet', 60);
   text(worldTerritories[counter1], width*0.18, height*0.695);
-  if (counter1 == 0) {
+  /*if (counter1 == 0) {
     text(elderreachRegions[counter2], width*0.18, height*0.91);
   } else if (counter1 == 1) {
     text(deadlandsRegions[counter2], width*0.18, height*0.91);
@@ -306,7 +306,7 @@ function getCurrent() {
     text(ulreynianRegions[counter2], width*0.18, height*0.91);
   } else if (counter1 == 5) {
     text(adraxisRegions[counter2], width*0.18, height*0.91);
-  }
+  }*/
   
   if (counter1 == 0) {
     image(img2, 40, 80);
@@ -391,22 +391,22 @@ function getTown() {
   
   if (counter1 == 0) {
     townR = int(random(townsElderreach.length));
-    text(townsElderreach[townR], width*0.8205, height*0.18);
+    text(townsElderreach[townR], width*0.18, height*0.91);
   } else if (counter1 == 1) {
     townR = int(random(townsDeadlands.length));
-    text(townsDeadlands[townR], width*0.8205, height*0.18);
+    text(townsDeadlands[townR], width*0.18, height*0.91);
   } else if (counter1 == 2) {
     townR = int(random(townsAurelia.length));
-    text(townsAurelia[townR], width*0.8205, height*0.18);
+    text(townsAurelia[townR], width*0.18, height*0.91);
   } else if (counter1 == 3) {
     townR = int(random(townsKeyadrys.length));
-    text(townsKeyadrys[townR], width*0.8205, height*0.18);
+    text(townsKeyadrys[townR], width*0.18, height*0.91);
   } else if (counter1 == 4) {
     townR = int(random(townsUlreynian.length));
-    text(townsUlreynian[townR], width*0.8205, height*0.18);
+    text(townsUlreynian[townR], width*0.18, height*0.91);
   } else if (counter1 == 5) {
     townR = int(random(townsAdraxis.length));
-    text(townsAdraxis[townR], width*0.8205, height*0.18);
+    text(townsAdraxis[townR], width*0.18, height*0.91);
   }
 }
 
