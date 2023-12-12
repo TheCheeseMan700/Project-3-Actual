@@ -58,7 +58,6 @@ canvas {
   background-color: rgb(60,60,60);
   text-align: center;
   display: grid;
-  grid-template-row: 10% 10% 10%;
   gap: 3%;
   justify-content: center;
 }
@@ -69,7 +68,7 @@ canvas {
   background-color: rgb(60,60,60);
   text-align: top;
   display: grid;
-  gap: 3%;
+  gap: 5%;
   justify-content: center;
 }
 

@@ -149,8 +149,8 @@ function setup() {
   input.parent('button-holder-2');
   input.size(90);
 
-  let button9 = createImg('HideShowUIButton.png');
-  button9.parent('button-holder-2');
+  /*let button9 = createImg('HideShowUIButton.png');
+  button9.parent('button-holder-2');*/
 
   let button10 = createImg('ExitRegisterModeButton.png');
   button10.parent('button-holder-2');
