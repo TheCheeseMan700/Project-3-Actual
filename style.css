@@ -59,7 +59,7 @@ canvas {
   text-align: center;
   display: grid;
   grid-template-row: 10% 10% 10%;
-  gap: 5%;
+  gap: 3%;
   justify-content: center;
 }
 
