@@ -145,6 +145,10 @@ function setup() {
   button8.parent('button-holder-2');
   button8.mousePressed(registerID);
 
+  let input = createInput('Register Name');
+  input.parent('button-holder-2');
+  input.size(90);
+
   let button9 = createImg('HideShowUIButton.png');
   button9.parent('button-holder-2');
 
@@ -178,15 +182,34 @@ function setup() {
   
   background(40);
   rectMode(CENTER);
+  input.input(() => {
+    if(registerMode) {
+      let name = input.value();
+      if(name.length <= 14){
+
+      } else {
+        input.value(name.substring(0,name.length - 1))
+      }
+      noStroke();
+      fill(79, 85, 78);
+      rect(595,126,348,76);
+      fill(209, 218, 201);
+      textAlign(CENTER);
+      textFont('Handjet', 60);
+      text(name, width*0.5, height*0.18);
+    }
+  })
 }
 
 function draw() {
 }
 
 function baseSheet() {
-  image(img, 0, 0);
-  image(img8, 40, 80);
-  programOn = true;
+  if(!programOn) {
+    image(img, 0, 0);
+    image(img8, 40, 80);
+    programOn = true;
+  }
 }
 
 function powerOff() {
@@ -496,16 +519,21 @@ function saveID() {
 
 function registerID() {
   if(programOn) {
-    image(img17, 0, 0);
-    image(img8, 40, 80);
-    registerMode = true;
+    if(!registerMode) {
+      image(img17, 0, 0);
+      image(img8, 40, 80);
+      registerMode = true;
+    }
   }
 }
 
 function exitRegister() {
   if(programOn) {
-    baseSheet();
-    registerMode = false;
+    if(registerMode) {
+      programOn = false;
+      baseSheet();
+      registerMode = false;
+    }
   }
 }
 
@@ -563,7 +591,7 @@ function mouseClicked() {
 
     //Strength
     if((mouseX >= 426) && (mouseY >= 603) && (mouseX <= 441) && (mouseY <= 643)) {
-      if(strengthCounter >= 17) {
+      if(strengthCounter >= 20) {
         strengthCounter = 7;
       } else {
         strengthCounter = strengthCounter + 1;
@@ -578,7 +606,7 @@ function mouseClicked() {
     }  
     if((mouseX >= 516) && (mouseY >= 603) && (mouseX <= 531) && (mouseY <= 643)) {
       if(strengthCounter <= 7) {
-        strengthCounter = 17;
+        strengthCounter = 20;
       } else {
         strengthCounter = strengthCounter - 1;
       }
@@ -592,7 +620,7 @@ function mouseClicked() {
     }
     //Dexterity
     if((mouseX >= 549) && (mouseY >= 603) && (mouseX <= 561) && (mouseY <= 643)) {
-      if(dexterityCounter >= 17) {
+      if(dexterityCounter >= 20) {
         dexterityCounter = 7;
       } else {
         dexterityCounter = dexterityCounter + 1;
@@ -607,7 +635,7 @@ function mouseClicked() {
     }  
     if((mouseX >= 639) && (mouseY >= 603) && (mouseX <= 654) && (mouseY <= 643)) {
       if(dexterityCounter <= 7) {
-        dexterityCounter = 17;
+        dexterityCounter = 20;
       } else {
         dexterityCounter = dexterityCounter - 1;
       }
@@ -621,7 +649,7 @@ function mouseClicked() {
     }
     //Constitution
     if((mouseX >= 672) && (mouseY >= 603) && (mouseX <= 687) && (mouseY <= 643)) {
-      if(constitutionCounter >= 17) {
+      if(constitutionCounter >= 20) {
         constitutionCounter = 7;
       } else {
         constitutionCounter = constitutionCounter + 1;
@@ -636,7 +664,7 @@ function mouseClicked() {
     }  
     if((mouseX >= 762) && (mouseY >= 603) && (mouseX <= 777) && (mouseY <= 643)) {
       if(constitutionCounter <= 7) {
-        constitutionCounter = 17;
+        constitutionCounter = 20;
       } else {
         constitutionCounter = constitutionCounter - 1;
       }
@@ -650,7 +678,7 @@ function mouseClicked() {
     }
     //Intelligence
     if((mouseX >= 795) && (mouseY >= 603) && (mouseX <= 810) && (mouseY <= 643)) {
-      if(intelligenceCounter >= 17) {
+      if(intelligenceCounter >= 20) {
         intelligenceCounter = 7;
       } else {
         intelligenceCounter = intelligenceCounter + 1;
@@ -665,7 +693,7 @@ function mouseClicked() {
     }  
     if((mouseX >= 885) && (mouseY >= 603) && (mouseX <= 900) && (mouseY <= 643)) {
       if(intelligenceCounter <= 7) {
-        intelligenceCounter = 17;
+        intelligenceCounter = 20;
       } else {
         intelligenceCounter = intelligenceCounter - 1;
       }
@@ -679,7 +707,7 @@ function mouseClicked() {
     }
     //Wisdom
     if((mouseX >= 918) && (mouseY >= 603) && (mouseX <= 933) && (mouseY <= 643)) {
-      if(wisdomCounter >= 17) {
+      if(wisdomCounter >= 20) {
         wisdomCounter = 7;
       } else {
         wisdomCounter = wisdomCounter + 1;
@@ -694,7 +722,7 @@ function mouseClicked() {
     }  
     if((mouseX >= 1008) && (mouseY >= 603) && (mouseX <= 1023) && (mouseY <= 643)) {
       if(wisdomCounter <= 7) {
-        wisdomCounter = 17;
+        wisdomCounter = 20;
       } else {
         wisdomCounter = wisdomCounter - 1;
       }
@@ -708,7 +736,7 @@ function mouseClicked() {
     }
     //Charisma
     if((mouseX >= 1041) && (mouseY >= 603) && (mouseX <= 1056) && (mouseY <= 643)) {
-      if(charismaCounter >= 17) {
+      if(charismaCounter >= 20) {
         charismaCounter = 7;
       } else {
         charismaCounter = charismaCounter + 1;
@@ -723,7 +751,7 @@ function mouseClicked() {
     }  
     if((mouseX >= 1131) && (mouseY >= 603) && (mouseX <= 1146) && (mouseY <= 643)) {
       if(charismaCounter <= 7) {
-        charismaCounter = 17;
+        charismaCounter = 20;
       } else {
         charismaCounter = charismaCounter - 1;
       }

@@ -69,7 +69,7 @@ canvas {
   background-color: rgb(60,60,60);
   text-align: top;
   display: grid;
-  gap: 5%;
+  gap: 3%;
   justify-content: center;
 }
 
